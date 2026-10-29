@@ -1,0 +1,26 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "RAG system for Russian legislation and legal documents"
+readme = "README.md"
+authors = [
+    { name = "bertram202", email = "68940438+bertram202@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic-settings>=2.16.2",
+    "qdrant-client>=1.20.0",
+]
+
+[project.scripts]
+rag = "rag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
